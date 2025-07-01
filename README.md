@@ -1,2 +1,144 @@
 # NOIR
-A spot for NOIR projects for games.
+
+
+1. Install "Alias Isolation". The latest version can be found here: https://github.com/aliasIsolation/aliasIsolation
+
+Good news! You no longer have to worry about launching Alien: Isolation via the GUI.
+
+Alias is now available as a dll, meaning it is automatically injected into the game.
+
+_____________________
+
+
+2. For Nvidia users, this may not work alone. Head to your Nvidia control panel, hit Program Features and Add Alien: Isolation.
+   
+   Then scroll down to toggle Multi-Frame Sample AA (MFAA) on.
+
+_____________________
+
+
+
+
+3. Copy-paste the contents of my folder; "Alien Isolation" atop your existing game folder to overwrite the default Reshade and the game's DATA folder.
+
+_____________________
+
+4. Install the lastest Reshade to the location of your AI.exe.
+
+   For Steam users, it's likely C:\Program Files (x86)\Steam\steamapps\common\Alien Isolation
+
+   I'm currently running on 6.5.1. It will prompt you to "Choose a preset file (.ini)".
+
+   Hit Browse and find "FimicNoirReshade1.5.ini" in the Alien Isolation folder.
+_____________________
+
+
+5. Now for ray tracing. The game's global illumination system is wonderful, but to add that little extra shadow depth and light bounce,
+   
+   we can grab the RTGI shader created by Pascal Gilcher.
+
+   It's a paid shader as part of the iMMERSE Pro pack, available through Gilcher's Patreon. One month's subscription will gain you access.
+
+  a)  Extract the iMMERSE Pro pack to a safe place.
+
+  b)  Copy the Textures folder therein and paste it to C:\Program Files (x86)\Steam\steamapps\common\Alien Isolation\reshade-shaders
+
+  c)  Drop the contents of the Shaders folder into C:\Program Files (x86)\Steam\steamapps\common\Alien Isolation\reshade-Shaders\Shaders\iMMERSE
+
+      IF YOU WOULD RATHER NOT SPEND MONEY, don't worry, I got you.
+
+      NOIR 1.5 Kino (provided in my pack) is good for 80% of the game, and benefits from no ghosting during cutscenes - what it was made for.
+
+_____________________
+
+
+6. Finally, you can load up Alien Isolation. In the Video settings, switch to Windowed Fullscreen, Motion Blur On and Chromatic Aberration Off.
+
+   Make sure Anti-aliasing is set to SMAA T1x, then you're good to go!
+
+_____________________
+
+BUT WAIT? What's that optional folder?
+
+For the following steps, I have original back up files in the folder entitled, "BACKUP", just in case.
+
+_____________________
+
+
+First, we have LENSFLARECONFIG.BIN. 
+
+This removes certain lens flare elements one would expect from anamorphic lenses/ coated lenses.
+
+Black and white films were often filmed with spherical lenses, in a 1.85:1 aspect ratio.
+
+Lens flare isn't so glaring with spherical; you get lateral bloom instead,
+
+much like what you see when looking at individual lights across Sevastopol Station.
+
+Just pop that LENSFLARE_CONFIG.BIN into your DATA folder.
+
+_____________________
+
+
+Now for the mysterious UI.BNK. The copy I created for this pack has removed that high pitched sound effect for save stations.
+
+That sound alone does a fabulous job of triggering tinnitus in sufferers, so the option is there should you wish to use it.
+
+In Alien Isolation\DATA\SOUND you will find the original UI.BNK file.
+
+Simply replace it with the version in this pack.
+
+Deleting it entirely removes 250 other sound effects, which is not ideal.
+
+_____________________
+
+If you want to delete the immersion-breaking orange glow every interactive aspect of the game has,
+
+SELECTIONOVERLAYPARAMS.BIN can go into Alien Isolation\DATA\UI
+
+Be aware that doing so will mean you have to really look for items, and necessity of the flashlight is amplified.
+
+_____________________
+
+Yet another addition I've created is a fun little amalgam of 1954's "The Black Widow" Fox intro and the classic unresolved intro made famous by Alien 3.
+
+To make that happen, take the FOX_IDENT.USM file and drop it into Alien Isolation\DATA\UI\MOVIES.
+
+_____________________
+
+
+ReShade has a habit of forgetting certain settings whenever you add a new preset. That's why you backed it up. You can cross-reference the folders and correct accordingly.
+
+If you find any of these effects "failed to compile" in-game, check in the ReShade settings that the corresponding folder is mentioned in the "Effect Search Paths" section.
+
+If not, find it in your File Explorer, Copy As Path, Hit + in "Effect Search Paths", then Paste into the new window.
+
+_____________________
+
+On that note, you may find ReShade causing some ghosting during cutscenes (as hinted at after step 6).
+
+This is because the scenes are separate to the in-game engine, which is still working in the background.
+
+To avoid this, on ReShade you can set a key to toggle all effects in between and including Reveil Top and Reveil Bottom.
+
+Or toggle to NOIR 1.5 Kino. That's what I made it for.
+_____________________
+
+
+Anecdotal: I usually have everything set on ultra and my settings on my Nvidia Control Panel set to Vertical Sync as well as the in-game setting to ensure the Nvidia's Adaptive VSync is utilised. Double tap.
+
+I also left sharpening and chromatic aberration set to default on Alias.
+
+Despite the ultra settings, the resolution is best reduced to 2048x1152. Any higher than this and the sharpness reaches a point of insanity which takes away from the aesthetic.
+
+Shadow Mapping is on Standard; Contact Hardening creates unwelcome artifacts.
+
+MAKE SURE THE FILM GRAIN INTENSITY IS SET TO ZERO, elsewise it will look awful.
+
+
+A trailer using this preset can be found here: https://www.youtube.com/watch?v=oCR6Y1IgTSQ&t
+
+Enjoy.
+
+
+Preset by Sebastian (thecloakedsignpost). Please credit if you utilise it in media.
